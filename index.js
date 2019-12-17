@@ -1,38 +1,39 @@
 // Your code here
-class Cat {
-  //...
-  consrtuctor(name,sex){
-    this.name = name;
-    this.sex = sex;
+
+class Cat{
+  constructor(name,sex){
+      this.name = name;
+      this.sex = sex;
   }
-  let speak=function(){
-    return `${name} says meow!`;
-  }
-}
- 
-class Dog {
-  //...
-   consrtuctor(name,sex){
-    this.name = name;
-    this.sex = sex;
-  }  
-    let speak=function(){
-    return `${name} says woof!`;
+  speak(){
+      return this.name + " says meow!";
   }
 }
- 
-class Bird {
-  //...
-   consrtuctor(name,sex){
-    this.name = name;
-    this.sex = sex;
+
+class Dog{
+  constructor(name,sex){
+      this.name = name;
+      this.sex = sex;
   }
-  let speak=function(){
-    if(this.sex=='female')
-      return `${name} says squawk!`;
-    else if (this.sex=='male')
-    {
-      return  "It's me! " +this.name + ", the parrot!";
-    }
+  speak(){
+      return this.name + " says woof!";
   }
 }
+
+class Bird{
+  constructor(name,sex){
+      this.name = name;
+      this.sex = sex;
+  }
+  speak(){
+      let val;
+      if(this.sex == 'male'){
+          return "It's me! " + this.name + ", the parrot!";
+      }
+      else{
+          return this.name + " says squawk!";
+      }
+  }
+}
+
+
